@@ -146,7 +146,7 @@ function createTask(inputAjouter) {
     editTitre(span);
   });
 
-  uls.forEach((ul) => {
+uls.forEach((ul) => {
     ul.addEventListener("dragover", (e) => {
         if (e.target.tagName === "UL") {
             e.preventDefault();
@@ -157,15 +157,7 @@ function createTask(inputAjouter) {
             e.preventDefault();
             let id = e.dataTransfer.getData("text");
             let liOh = document.getElementById(id);
-            let firstLi = e.target.querySelector("li");
-            if (e.target === liOh.parentNode) {
-                return;
-            }
-            if (e.target.compareDocumentPosition(liOh) & Node.DOCUMENT_POSITION_FOLLOWING) {
-                e.target.insertBefore(liOh, firstLi);
-            } else {
-                e.target.appendChild(liOh);
-            }
+            e.target.appendChild(liOh);
         }
     });
 });
