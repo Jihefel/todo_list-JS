@@ -7,6 +7,8 @@ let cancelRemove = document.querySelectorAll(".fa-xmark");
 let btnConfirmRemove = document.querySelectorAll(".fa-check");
 let uls = document.querySelectorAll("ul");
 let li = document.querySelectorAll("li");
+const row = document.querySelector(".row")
+const btnAddColumn = document.querySelector(".ajouterCol")
 
 function removeAddClass(element, class1, class2) {
   element.classList.remove(class1);
@@ -16,6 +18,52 @@ function removeAddClass(element, class1, class2) {
 function toggleClass(element, classe) {
   element.classList.toggle(classe);
 }
+
+
+function addColumn() {
+  let div1 = document.createElement("div");
+  div1.className = "col";
+  let div2 = document.createElement("div");
+  div2.classList.add("card","bg-transparent");
+  let div3 = document.createElement("div");
+  div3.classList.add("card-header");
+  let input1 = document.createElement("input");
+  input1.placeholder = "Titre";
+  let div4 = document.createElement("div");
+  div4.className = "card-body";
+  let ul = document.createElement("ul");
+  ul.className = "list-group";
+  let div5 = document.createElement("div");
+  div5.classList.add("input-group","my-3");
+  let div6 = document.createElement("div");
+  div6.classList.add("form-floating");
+  let input2 = document.createElement("input");
+  input2.classList.add("form-control","form-control-sm","rounded","ajouter");
+  input2.placeholder = "Ajouter une tâche";
+  input2.setAttribute("type","text");
+  input2.setAttribute("id","input-add");
+  input2.setAttribute("data-drop",false);
+  let label = document.createElement("label");
+  label.setAttribute("for","input-add");
+  label.textContent = "Ajouter une tâche";
+  let i = document.createElement("i")
+  i.classList.add("fa-regular","fa-plus")
+
+  row.appendChild(div1);
+  div1.appendChild(div2);
+  div2.appendChild(div3)
+  div3.appendChild(input1)
+  div2.appendChild(div4)
+  div4.appendChild(ul)
+  div4.appendChild(div5)
+  div5.appendChild(div6)
+  div6.appendChild(input2)
+  div6.appendChild(label)
+  label.prepend(i)
+
+}
+
+btnAddColumn.addEventListener("click",addColumn)
 
 let titreTache;
 let spanDuBoutonClique;
@@ -188,3 +236,5 @@ inputAdd.forEach((inp) => {
     }
   });
 });
+
+
