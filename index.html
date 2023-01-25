@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>To Do List - Flament Jérémy</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="titre">
+            <h1>To Do List</h1>
+        </div>
+        <hr>
+        <section id="trello">
+            <div class="container text-center g-0">
+                <div class="row row-cols-3 align-items-start">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header text-bg-danger">
+                                &Agrave; faire
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    
+                                </ul>
+                                <div class="input-group my-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control form-control-sm rounded ajouter"
+                                            id="input-add1" placeholder="Ajouter une tâche" data-drop="false">
+                                        <label for="input-add"><i class="fa-regular fa-plus"></i> Ajouter une
+                                            tâche</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header text-bg-warning">
+                                En cours
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+
+                                </ul>
+                                <div class="input-group my-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control form-control-sm rounded ajouter"
+                                            id="input-add1" placeholder="Ajouter une tâche" data-drop="false">
+                                        <label for="input-add"><i class="fa-regular fa-plus"></i> Ajouter une
+                                            tâche</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header text-bg-success">
+                                Terminées
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+
+                                </ul>
+                                <div class="input-group my-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control form-control-sm rounded ajouter"
+                                            id="input-add1" placeholder="Ajouter une tâche" data-drop="false">
+                                        <label for="input-add"><i class="fa-regular fa-plus"></i> Ajouter une
+                                            tâche</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Script JS Bootstrap -->
+    <script src='./node_modules/bootstrap/dist/js/bootstrap.bundle.js'></script>
+</body>
+<script src="./public/js/main.js"></script>
+
+</html>
