@@ -42,6 +42,7 @@ function addColumn() {
   div3.classList.add("card-header","position-relative");
   input1 = document.createElement("input");
   input1.placeholder = "Titre";
+  input1.classList.add("px-2");
   poubelle = document.createElement("i");
   poubelle.classList.add(
     "fa-regular",
